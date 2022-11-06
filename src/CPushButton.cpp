@@ -6,6 +6,9 @@
  */
 
 #include "CPushButton.h"
+#include <iostream>
+
+
 
 CPushButton::CPushButton()
 {
@@ -16,6 +19,12 @@ CPushButton::CPushButton()
 void CPushButton::setEventQueue(CEventQueue &eventQueue)
 {
 	m_eventQueue = &eventQueue;
+}
+
+void CPushButton::addEvent()
+{
+	Event event = BPushed;
+	m_eventQueue->addEvent(event);
 }
 
 CPushButton::~CPushButton()

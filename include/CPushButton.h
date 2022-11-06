@@ -17,6 +17,7 @@ private:
 public:
 	CPushButton();
 	void setEventQueue(CEventQueue& eventQueue);
+	void addEvent();
 	virtual ~CPushButton();
 };
 

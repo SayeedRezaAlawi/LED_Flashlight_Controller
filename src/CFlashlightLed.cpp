@@ -6,6 +6,7 @@
  */
 
 #include "CFlashlightLed.h"
+#include <Cstdio>
 
 CFlashlightLed::CFlashlightLed()
 {
@@ -21,4 +22,5 @@ CFlashlightLed::~CFlashlightLed()
 void CFlashlightLed::setBrightness(uint8_t brightness)
 {
 	m_brightness = brightness;
+	printf("Brightness is set as %d.\n", m_brightness);
 }

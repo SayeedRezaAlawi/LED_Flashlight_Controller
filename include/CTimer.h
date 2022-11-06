@@ -10,6 +10,7 @@
 
 #include "CEventQueue.h"
 
+
 class CTimer
 {
 private:
@@ -19,6 +20,7 @@ public:
 	CTimer();
 	void setEventQueue(CEventQueue& eventQueue);
 	void setWaitTime(uint16_t millis);
+	void addEvent();
 	virtual ~CTimer();
 };
 

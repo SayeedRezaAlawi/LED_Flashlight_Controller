@@ -20,6 +20,6 @@ CVoltageMeter::~CVoltageMeter()
 
 float CVoltageMeter::getVoltage()
 {
-	float voltage=0.00;
+	float voltage=4;
 	return voltage;
 }
