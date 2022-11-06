@@ -11,26 +11,35 @@
 #include "CPushButton.h"
 #include "CEventQueue.h"
 #include "CEeprom.h"
-#include "CFlashlighLed.h"
+#include "CFlashlightLed.h"
 #include "CTimer.h"
 #include "CVoltageMeter.h"
 #include "CWarningLed.h"
 #include "global.h"
+
+#define HBU_ON (m_hbu->on())
+#define HBU_OFF (m_bhu->off())
+#define TMR(X) (m_tmr->setWaitTime(X))
+#define FLB(X) (m_light->setBrightness(X))
+#define EES(X) (m_eeprom->store(X))
+#define EER (m_eeprom->retrieve())
+#define BAT (m_bat->getVoltage())
 
 class CController
 {
 private:
 	CPushButton* m_mode;
 	CTimer* m_tmr;
-	CFlashlighLed* m_light;
+	CFlashlightLed* m_light;
 	CWarningLed* m_hbu;
 	CVoltageMeter* m_bat;
 protected:
 	CEventQueue m_evtQueue;
 	CEeprom* m_eeprom;
+	CController(CPushButton* pushBtn, CTimer* timer, CFlashlightLed* light,
+			CWarningLed* hbu, CVoltageMeter* bat, CEeprom* eeprom);
 public:
-	CController();
-	void run();
+	virtual void run();
 	virtual ~CController();
 };
 

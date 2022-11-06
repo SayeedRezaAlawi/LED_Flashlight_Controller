@@ -7,10 +7,20 @@
 
 #include "CController.h"
 
-CController::CController()
+CController::CController(CPushButton* pushBtn, CTimer* timer, CFlashlightLed* light,
+		CWarningLed* hbu, CVoltageMeter* bat, CEeprom* eeprom)
 {
-	// TODO Auto-generated constructor stub
+	m_mode = pushBtn;
+	m_tmr = timer;
+	m_light = light;
+	m_hbu = hbu;
+	m_bat = bat;
+	m_eeprom = eeprom;
 
+}
+
+void CController::run()
+{
 }
 
 CController::~CController()

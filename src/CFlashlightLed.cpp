@@ -5,20 +5,20 @@
  *      Author: Reza
  */
 
-#include "CFlashlighLed.h"
+#include "CFlashlightLed.h"
 
-CFlashlighLed::CFlashlighLed()
+CFlashlightLed::CFlashlightLed()
 {
 	// TODO Auto-generated constructor stub
 
 }
 
-CFlashlighLed::~CFlashlighLed()
+CFlashlightLed::~CFlashlightLed()
 {
 	// TODO Auto-generated destructor stub
 }
 
-void CFlashlighLed::setBrightness(uint8_t brightness)
+void CFlashlightLed::setBrightness(uint8_t brightness)
 {
 	m_brightness = brightness;
 }

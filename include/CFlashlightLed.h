@@ -5,19 +5,19 @@
  *      Author: Reza
  */
 
-#ifndef CFLASHLIGHLED_H_
-#define CFLASHLIGHLED_H_
+#ifndef CFLASHLIGHTLED_H_
+#define CFLASHLIGHTLED_H_
 
 #include "global.h"
 
-class CFlashlighLed
+class CFlashlightLed
 {
 private:
 	uint8_t m_brightness;
 public:
-	CFlashlighLed();
+	CFlashlightLed();
 	void setBrightness(uint8_t brightness);
-	virtual ~CFlashlighLed();
+	virtual ~CFlashlightLed();
 };
 
 #endif /* CFLASHLIGHLED_H_ */

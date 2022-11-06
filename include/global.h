@@ -1,12 +1,14 @@
 /*
  * global.h
  *
- *  Created on: Mar 11, 2021
- *      Author: reza
+ *  Created on: Nov 6, 2022
+ *      Author: Reza
  */
 
 #ifndef GLOBAL_H_
 #define GLOBAL_H_
+
+
 
 typedef unsigned int uint32_t;
 typedef unsigned short uint16_t;
@@ -18,7 +20,7 @@ typedef signed char sint8_t;
 
 enum Event{
     BPushed,
-    TmrExp
+    TmrExp,
 };
 
 #endif /* GLOBAL_H_ */
