@@ -6,7 +6,7 @@
  */
 
 #include "CWarningLed.h"
-
+#include <iostream>
 CWarningLed::CWarningLed()
 {
 	// TODO Auto-generated constructor stub
@@ -20,8 +20,10 @@ CWarningLed::~CWarningLed()
 
 void CWarningLed::on()
 {
+	std::cout << "Warning LED is on" << std::endl;
 }
 
 void CWarningLed::off()
 {
+	std::cout << "Warning LED is off" << std::endl;
 }
